@@ -1,0 +1,552 @@
+.home .carousel-item {
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.home .carousel-item:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.home .carousel-item .container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.home .carousel-item h2 {
+  font-size: 80px;
+  color: #ffffff;
+  margin: 0 0 10px;
+  opacity: 0;
+}
+.home .carousel-item p {
+  font-size: 30px;
+  margin: 0;
+  color: #eeeeee;
+  opacity: 0;
+}
+.home .carousel-item.active h2 {
+  animation: fadeInLeft 0.5s ease forwards;
+}
+.home .carousel-item.active p {
+  animation: fadeInRight 0.5s ease forwards;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(
+    132deg,
+    rgb(221, 221, 221) 0%,
+    rgb(110, 136, 161) 100%
+  );
+}
+
+.slider-container {
+  /* position: relative; */
+  margin: 50px;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.home .carousel-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  z-index: 10;
+  transform: translateX(-50%);
+}
+
+.home .carousel-indicators {
+  position: relative;
+  margin: 0;
+}
+
+.home .carousel-indicators li {
+  height: 40px;
+  width: 40px;
+  margin: 0 5px;
+  border-radius: 10%;
+  background-position: center;
+  background-size: cover;
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+.home .carousel-indicators li.active {
+  border-color: #ffffff;
+  transform: scale(1.2);
+}
+
+.home .carousel-control-next,
+.home .carousel-control-prev {
+  height: 60px;
+  width: 60px;
+  opacity: 1;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.home .carousel-control-next:hover,
+.home .carousel-control-prev:hover {
+  box-shadow: 0 0 10px #ffffff;
+}
+.home .carousel-control-next img,
+.home .carousel-control-prev img {
+  width: 30px;
+}
+.home .carousel-control-next {
+  right: -90px;
+}
+.home .carousel-control-prev {
+  left: -90px;
+}
+
+/*responsive*/
+@media (max-width: 767px) {
+  .home .carousel-control-next,
+  .home .carousel-control-prev {
+    display: none;
+  }
+  .home .carousel-indicators li {
+    height: 60px;
+    width: 60px;
+  }
+  .home .carousel-item h2 {
+    font-size: 45px;
+  }
+  .home .carousel-item p {
+    font-size: 22px;
+  }
+}
+.mobiles {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+}
+.mobiles li {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin: 10px;
+}
+.mobiles li:hover {
+  transform: scale(1.4);
+}
+.carousel-controls ol {
+  list-style: none;
+}
+
+/* Adding Style to search bar */
+
+/* modified some margin values */
+.navbar-custom .form-control {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  border-bottom: 2px solid white;
+  margin-left: 140px;
+  margin-right: 10px;
+  width: 500px;
+}
+
+/* Fixing navbar at top */
+.navbar {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+
+#venue {
+  background: linear-gradient(
+    132deg,
+    rgb(110, 136, 161) 100%,
+    rgb(221, 221, 221) 0%
+  );
+}
+
+/* Adding style to icons */
+
+.navbar-nav i {
+  font-size: 1rem;
+}
+
+.navbar-nav {
+  margin-left: 25px;
+}
+
+/* Adding Animation to favourites */
+
+.bi-heart-fill {
+  color: rgb(163, 159, 159);
+  transition: color 0.3s ease-in-out;
+}
+
+.bi-heart-fill:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.bi-heart:active {
+  transform: scale(1.5);
+}
+
+.cartfav:hover {
+  transform: scale(1.3);
+}
+
+/* Adding Animation to cart */
+
+.bi-cart-fill {
+  color: rgb(163, 159, 159);
+  transition: color 0.3s ease-in-out;
+}
+
+.bi-cart-fill:hover {
+  color: rgb(87, 87, 255);
+  cursor: pointer;
+}
+
+.bi-cart:active {
+  transform: scale(1.5);
+}
+
+/* Adding media query to search */
+
+@media (max-width: 986px) {
+  .navbar-custom .form-control {
+    width: auto;
+    margin-left: 0px;
+  }
+  .navbar-nav {
+    align-items: center;
+  }
+
+  .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    transform: scale(1.8);
+  }
+}
+
+/* #product div img{ */
+
+#Featured-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#Featured-categories a h5 {
+  text-align: center;
+}
+
+#Featured-categories a {
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+}
+
+.fCatCard img {
+  width: 200px;
+  height: 300px;
+}
+
+.fCatCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  width: 200px;
+
+  margin: 15px;
+  padding-top: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px black;
+}
+
+#most-purchased {
+  overflow: hidden;
+  /* flex-wrap: nowrap; */
+}
+
+/*  */
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 250px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.grid {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  /* overflow: hidden; */
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: fill;
+}
+
+.card-text {
+  height: 5.5vw;
+  overflow: auto;
+}
+
+.text-color {
+  color: #fff;
+}
+
+.carousel-item img {
+  height: 400px;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.prod {
+  /* background-color: antiquewhite; */
+  padding: 30px;
+}
+
+.d-block {
+  box-shadow: rgba(0, 0, 0, 0.432) 0px 5px 15px;
+}
+
+#productsSlider {
+  box-shadow: rgba(6, 6, 6, 0.432) 0px 5px 15px;
+  height: 460px;
+}
+
+.bg-primary {
+  background-color: transparent !important;
+}
+
+.bg345 {
+  box-shadow: rgba(5, 5, 5, 0.432) 0px 5px 15px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(33, 71, 75, 1) 18%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.bg123 {
+  padding-top: 30px !important;
+}
+
+#venue h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.featuredCategory {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.featuredCategory h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  /* font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif; */
+}
+
+.featuredCategoryblock:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #d0daee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+/* .footer-content-right {
+  padding-right: 40px;
+}
+
+.footer-text-left {
+  font-size: 25px;
+  padding-left: 40px;
+  word-spacing: 20px;
+} */
+
+a.menu {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+a.menu:hover {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.icon-style {
+  height: 40px;
+  margin-left: 20px;
+}
+
+.icon-style:hover {
+  transform: scale(0.8);
+}
+
+.logoCompany {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+}
+
+.logoCompany img {
+  height: 40px;
+  width: 40px;
+}
+/* Footer */
+
+.footer {
+  padding: 50px 0 20px 0;
+  background-color: #35404f;
+  color: #878c94;
+}
+.footer .title{
+  text-align: left;
+  color:#fff;
+  font-size:25px;
+}
+.footer .social-icon{
+  padding:0px;
+  margin:0px;
+}
+.footer .social-icon a{
+  display:inline-block;
+  color:#fff;
+  font-size:25px;
+  padding:5px;
+}
+.footer .social-icon a:hover{
+  transform: scale(1.2);
+}
+.footer .acount-icon a{
+  display:block;
+  color:#fff;
+  font-size:18px;
+  padding:5px;
+  text-decoration:none;
+}
+.footer .acount-icon .fa{
+  margin-right:25px;
+}
+.footer .acount-icon .fa:hover{
+  transform: scale(1.4);
+}
+.heart:hover{
+  color:red;
+}
+.cart:hover{
+  color: black;
+}
+.user:hover{
+  color: brown;
+}
+.globe:hover{
+  color: rgb(100, 100, 160);
+}
+
+.footer .category a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 20px;
+  margin: 1px;
+  border-radius:4px;
+  margin-top: 6px;
+  background-color: black;
+  border: solid 1px #ffffff;
+}
+.footer .category a:hover{
+  transform: scale(1.1);
+  background-color:#fff;
+  color: #000000;
+}
+
+.footer .payment{
+  margin:0px;
+  padding:0px;
+  list-style-type:none;
+}
+.footer .payment li{
+  list-style-type:none
+}
+.footer .payment li a {
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  float: left;
+  font-size: 25px;
+  padding: 10px 10px;
+}
+.footer .payment li a:hover{
+  transform: scale(1.3);
+  color: #000000;
+  
+  
+}
+
+/* profile page css part */
+

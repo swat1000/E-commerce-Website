@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RCSV ECOM</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="icon" href="img/Logo2.jpg" />
+  </head>
+
+  <body>
+    <section>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <div class="logoCompany">
+            <img src="img/Logo2.jpg" alt="" />
+            <a class="navbar-brand" href="#">RCSV Store</a>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Featured</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Categories
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="./Pages/feature page/feature.html?category=smartphones"
+                      >SmartPhones</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="./Pages/feature page/feature.html?category=laptops"
+                      >Laptops</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="./Pages/feature page/feature.html?category=fragrances"
+                      >Fragrances</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="./Pages/feature page/feature.html?category=skincare"
+                      >SkinCare</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="./Pages/feature page/feature.html?category=groceries"
+                      >Groceries</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Accounts</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex mx-auto my-2 my-lg-0 navbar-custom">
+              <input
+                class="form-control me-2 navbar-custom flex-grow-1 flex-sm-grow-1"
+                type="search"
+                placeholder="Search Product"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-light" type="submit">
+                Search
+              </button>
+            </form>
+            <ul class="navbar-nav icons">
+              <li class="nav-item cartfav">
+                <a class="nav-link position-relative" href="#">
+                  <i class="bi bi-heart-fill"></i>
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger invisible"
+                    >1</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item cartfav">
+                <a class="nav-link position-relative" href="#">
+                  <i class="bi bi-cart-fill"></i>
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger invisible"
+                    >1</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item cartfav">
+                <a class="nav-link position-relative" href="Pages\profilepage\profile.html">
+                  <i class="bi bi-person"></i>
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger invisible"
+                    >1</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <section class="home">
+      <div id="carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-controls">
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carousel"
+              data-slide-to="0"
+              class="active"
+              style="background-image: url('img/og-macbook-pro-202301.jpeg')"
+            ></li>
+            <li
+              data-target="#carousel"
+              data-slide-to="1"
+              style="
+                background-image: url('img/iphone-12-finish-select-202207-purple.jpeg');
+              "
+            ></li>
+            <li
+              data-target="#carousel"
+              data-slide-to="2"
+              style="
+                background-image: url('img/airpods-max-hero-select-202011_FMT_WHH.jpeg');
+              "
+            ></li>
+          </ol>
+          <a
+            class="carousel-control-prev"
+            href="#carousel"
+            role="button"
+            data-slide="prev"
+          >
+            <img src="img/left-arrow.svg" alt="Prev" />
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carousel"
+            role="button"
+            data-slide="next"
+          >
+            <img src="img/right-arrow.svg" alt="Next" />
+          </a>
+        </div>
+        <div class="carousel-inner">
+          <div
+            class="carousel-item active"
+            style="background-image: url('img/og-macbook-pro-202301.jpeg')"
+          >
+            <div class="container">
+              <h2>macbook</h2>
+              <p>Features</p>
+              <div style="color: aliceblue">
+                Apple M1 Pro with 10-core CPU, 16-core GPU, 16-core Neural
+                Engine| 16GB unified memory| 512GB SSD storage| 16-inch Liquid
+                Retina XDR display| Three Thunderbolt 4 ports, HDMI port, SDXC
+                card slot, MagSafe 3 port| 140W USB-C Power Adapter| Backlit
+                Magic Keyboard with Touch ID US English
+              </div>
+            </div>
+          </div>
+          <div
+            class="carousel-item mobileclrchange"
+            style="
+              background-image: url('img/iphone-12-finish-select-202207-purple.jpeg');
+            "
+          >
+            <div class="container">
+              <h2>iPhone 12</h2>
+              <p>Pick your favourite</p>
+              <div class="mobiles">
+                <li style="background-color: rgb(155, 181, 206)">
+                  <a href="#"></a>
+                </li>
+                <li style="background-color: rgb(33, 94, 124)">
+                  <a href="#"></a>
+                </li>
+                <li style="background-color: rgb(165, 0, 17)">
+                  <a href="#"></a>
+                </li>
+                <li style="background-color: rgb(54, 73, 53)">
+                  <a href="#"></a>
+                </li>
+              </div>
+            </div>
+          </div>
+          <div
+            class="carousel-item"
+            style="
+              background-image: url('img/airpods-max-hero-select-202011_FMT_WHH.jpeg');
+            "
+          >
+            <div class="container">
+              <h2>Air pods max</h2>
+              <p>Pick your favourite</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- most-purchased section -->
+    <div class="py-5 bg123" id="venue">
+      <h3>Most Purchased</h3>
+      <div class="container bg345">
+        <div class="row bg-primary animate-in-down">
+          <div class="p-4 col-md-6 align-self-center text-color">
+            <p class="m-0">Feel comfortable, and purchase items</p>
+            <h2>Discover the products</h2>
+            <p class="my-4">
+              Here at RCSV we bring you the varity of Products, it is easy to
+              choose from and get that deliverd to your doorstep
+            </p>
+            <a href="#productsSlider " class="btn mb-3 p-2 btn-light"
+              >View the gallery</a
+            >
+          </div>
+          <div class="p-0 col-md-6">
+            <div
+              class="carousel slide"
+              data-ride="carousel"
+              id="productsSlider"
+            >
+              <div class="prod" class="carousel-inner" role="listbox"></div>
+              <a
+                class="carousel-control-prev"
+                href="#productsSlider"
+                role="button"
+                data-slide="previous"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#productsSlider"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured-categories section -->
+    <div class="featuredCategory">
+      <h3>Featured Categories</h3>
+      <div id="Featured-categories"></div>
+    </div>
+
+    <!--Section 7: Footer-->
+    <!-- <div class="footer">
+      <p class="footer-text-left">
+        <a href="index.html" class="menu">home</a>
+        <a href="https://github.com/lord-vector/e-com-group2" class="menu"
+          >about</a
+        >
+        <a href="https://github.com/lord-vector/e-com-group2" class="menu"
+          >credits</a
+        >
+      </p>
+      <div class="footer-content-right">
+        <a href="https://github.com/lord-vector/e-com-group2"
+          ><img src="img/github.jpeg" class="icon-style" alt="Github icon"
+        /></a>
+        <a href="https://www.twitter.com"
+          ><img src="img/twitter.jpeg" class="icon-style" alt="Twitter icon"
+        /></a>
+        <a href="https://www.twitter.com"
+          ><img src="img/email.jpeg" class="icon-style" alt="Emailicon"
+        /></a>
+      </div>
+    </div> -->
+
+
+    <!-- new footer -->
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+          <div class="col-sm-3">
+              <h4 class="title">R V S C</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit, libero a molestie consectetur, sapien elit lacinia mi.</p>
+              <ul class="social-icon">
+              <a href="#" class="social"><i class="fa fa-facebook" ></i></a>
+              <a href="#" class="social"><i class="fa fa-twitter" ></i></a>
+              <a href="#" class="social"><i class="fa fa-instagram" ></i></a>
+              <a href="#" class="social"><i class="fa fa-youtube-play" ></i></a>
+              <a href="#" class="social"><i class="fa fa-google" ></i></a>
+              </ul>
+              </div>
+          <div class="col-sm-3">
+              <h4 class="title">My Account</h4>
+              <span class="acount-icon">          
+              <a href="#"><i class="heart fa fa-heart" ></i> Wish List</a>
+              <a href="#"><i class="cart fa fa-cart-plus" ></i> Cart</a>
+              <a href="#"><i class="user fa fa-user" ></i> Profile</a>
+              <a href="#"><i class="globe fa fa-globe" ></i> Language</a>           
+            </span>
+              </div>
+          <div class="col-sm-3">
+              <h4 class="title">Category</h4>
+              <div class="category">
+              <a href="#">smartphones</a>
+              <a href="#">Laptops</a>
+              <a href="#">fragrances</a>
+              <a href="#">skincare</a>
+              <a href="#">groceries</a>          
+              </div>
+              </div>
+          <div class="col-sm-3">
+              <h4 class="title">Payment Methods</h4>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <ul class="payment">
+              <li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+              <li><a href="#"><i class="fa fa-credit-card" ></i></a></li>            
+              <li><a href="#"><i class="fa fa-paypal"></i></a></li>
+              <li><a href="#"><i class="fa fa-cc-visa" ></i></a></li>
+              </ul>
+              </div>
+          </div>
+          <hr>
+          </footer>
+
+    <script src="script.js"></script>
+  </body>
+  <script src="bootstrap.bundle.min.js"></script>
+  <!-- <button class="prev"><i class="fa fa-chevron-left"></i></button>
+  <button class="next"><i class="fa fa-chevron-right"></i></button> -->
+  <!-- <script src="./Pages/feature page/feature.apicall.js"></script> -->
+</html>
